@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const fs = require('fs')
-const auth = JSON.parse(fs.readFileSync('.auth'))
+// const auth = JSON.parse(fs.readFileSync('.auth'))
 const conf = JSON.parse(fs.readFileSync('conf.json'))
 let latestActivityID = fs.existsSync('.latestActivityID') ? fs.readFileSync('.latestActivityID') : 0
 
