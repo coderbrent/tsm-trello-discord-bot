@@ -18,7 +18,6 @@ const events = new Trello({
 })
 
 
-
 /*
 ** =====================================
 ** Discord event handlers and functions.
