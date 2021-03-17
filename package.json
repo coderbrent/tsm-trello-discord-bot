@@ -4,8 +4,7 @@
   "description": "A Discord bot for logging Trello events.",
   "main": "trellobot.js",
   "scripts": {
-    "start": "node trellobot.js",
-    "build": "node trellobot.js"
+    "start": "node trellobot.js"
   },
   "repository": {
     "type": "git",

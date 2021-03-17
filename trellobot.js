@@ -17,14 +17,14 @@ const events = new Trello({
     } 
 })
 
-
+console.log(process.env.discordToken)
 /*
 ** =====================================
 ** Discord event handlers and functions.
 ** =====================================
 */
 
-bot.login(process.env.discordToken)
+bot.login('ODAyMzg0MjI4MzY4NTE1MDgy.YAuciw.CsaqmgQX2ioTDHO04B0VfY-ExRg')
 bot.on('ready', () => {
     let guild = bot.guilds.get(conf.serverID)
     let channel = bot.channels.get(conf.channelID)
