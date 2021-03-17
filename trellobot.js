@@ -12,8 +12,8 @@ const events = new Trello({
     start: false,
     trello: {
         boards: conf.boardIDs, // array of Trello board IDs 
-        key: auth.trelloKey, // your public Trello API key
-        token: auth.trelloToken // your private Trello token for Trellobot
+        key: process.env.trelloKey, // your public Trello API key
+        token: process.env.trelloToken // your private Trello token for Trellobot
     } 
 })
 
@@ -24,7 +24,7 @@ const events = new Trello({
 ** =====================================
 */
 
-bot.login(auth.discordToken)
+bot.login(process.env.discordToken)
 bot.on('ready', () => {
     let guild = bot.guilds.get(conf.serverID)
     let channel = bot.channels.get(conf.channelID)
