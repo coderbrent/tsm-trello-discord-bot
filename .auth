@@ -1,6 +1,0 @@
-{
-    "instructions": "Replace the following three values as appropriate, then rename this file to '.auth' (without '-template' at the end).",
-    "discordToken": "ODAyMzg0MjI4MzY4NTE1MDgy.YAuciw.CsaqmgQX2ioTDHO04B0VfY-ExRg",
-    "trelloKey": "723347888d1b6e2cf8dc9a10275dde86",
-    "trelloToken": "d7af8295a891dcaa045122f7194f17752c24aedc14fd339fe6c783acfd21952f"
-}
