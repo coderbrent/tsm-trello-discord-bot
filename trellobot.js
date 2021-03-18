@@ -1,10 +1,15 @@
 require('dotenv').config();
+const express = require('express')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const fs = require('fs')
 // const auth = JSON.parse(fs.readFileSync('.auth'))
 const conf = JSON.parse(fs.readFileSync('conf.json'))
 let latestActivityID = fs.existsSync('.latestActivityID') ? fs.readFileSync('.latestActivityID') : 0
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => console.log(`listening on port: ${port}`))
 
 const Trello = require('trello-events')
 const events = new Trello({
@@ -18,7 +23,6 @@ const events = new Trello({
     } 
 })
 
-console.log(process.env.DISCORD_TOKEN)
 /*
 ** =====================================
 ** Discord event handlers and functions.
