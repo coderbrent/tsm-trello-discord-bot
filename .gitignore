@@ -1,4 +1,4 @@
-.auth
+.env
 .latestActivityID
 node_modules/
 .vscode/

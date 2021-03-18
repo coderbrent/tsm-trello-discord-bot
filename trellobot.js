@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 const fs = require('fs')
@@ -12,19 +13,19 @@ const events = new Trello({
     start: false,
     trello: {
         boards: conf.boardIDs, // array of Trello board IDs 
-        key: process.env.trelloKey, // your public Trello API key
-        token: process.env.trelloToken // your private Trello token for Trellobot
+        key: process.env.TRELLO_KEY, // your public Trello API key
+        token: process.env.TRELLO_TOKEN // your private Trello token for Trellobot
     } 
 })
 
-console.log(process.env.discordToken)
+console.log(process.env.DISCORD_TOKEN)
 /*
 ** =====================================
 ** Discord event handlers and functions.
 ** =====================================
 */
 
-bot.login('ODAyMzg0MjI4MzY4NTE1MDgy.YAuciw.CsaqmgQX2ioTDHO04B0VfY-ExRg')
+bot.login(process.env.DISCORD_TOKEN)
 bot.on('ready', () => {
     let guild = bot.guilds.get(conf.serverID)
     let channel = bot.channels.get(conf.channelID)
@@ -315,7 +316,7 @@ events.on('updateCheckItemStateOnCard', (event, board) => {
 events.on('maxId', (id) => {
     if (latestActivityID == id) return
     latestActivityID = id
-    fs.writeFileSync('.latestActivityID', id)
+    fs.writeFileSync('.latestActivityID', JSON.stringify(id))
 })
 
 const send = (embed, content = ``) => conf.channel.send(`${content} ${conf.contentString}`, {embed:embed}).catch(err => console.error(err))
