@@ -6,7 +6,7 @@
     "channelID": "800757596893347853",
     "pollInterval": 10000,
     "contentString": "",
-    "enabledEvents": ['cardCreated', 'cardPositionChanged', 'cardArchived', 'cardDeleted'],
+    "enabledEvents": ["cardCreated", "cardPositionChanged", "cardArchived", "cardDeleted"],
     "userIDs": {
         "brentabruzese": "613791570679824441",
         "danvassallo1": "273621757619994625",
